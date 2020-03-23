@@ -14,16 +14,16 @@
     <main>
         <script>
 
-            let robot
-            let playerSelection = prompt("Rock Paper Scissors - Choose you weapon")
-            let choices = ["Rock", "Paper", "Scissors"]
+            let robot;
+            let playerSelection = prompt("Rock Paper Scissors - Choose you weapon");
+            let choices = ["Rock", "Paper", "Scissors"];
 
             function computerPlay(min, max) {
                 return Math.round(Math.random() * (max - min) + min);
             }
-            robot = choices[computerPlay(0, 2)]
-            playerSelection = playerSelection.toUpperCase()
-            robot = robot.toUpperCase()
+            robot = choices[computerPlay(0, 2)];
+            playerSelection = playerSelection.toUpperCase();
+            robot = robot.toUpperCase();
 
             /* Condition */
             function playRound() {
@@ -52,10 +52,10 @@
 
 
 
-            playRound()
-            console.log("You choose " + playerSelection + ".")
-            console.log("Computer choose " + robot + ".")
-            console.log("So..." + playRound())     
+            playRound();
+            console.log("You choose " + playerSelection + ".");
+            console.log("Computer choose " + robot + ".");
+            console.log("So..." + playRound());
         
         /* Compt*/
         
