@@ -13,37 +13,46 @@
     </header>
     <main>
         <script>
-            
 
-            let choix = ["Rock", "Paper", "Scissors"];
+            let robot
+            let player = prompt("Rock Paper Scissors - Choose you weapon")
+            let choices = ["Rock", "Paper", "Scissors"]
 
-            function computerPlay(min, max){
-              return Math.round(Math.random() * (max - min) + min);
+            function computerPlay(min, max) {
+                return Math.round(Math.random() * (max - min) + min);
             }
-            
-/* Condition */
+            robot = choices[computerPlay(0, 2)]
+            player = player.toUpperCase()
+            robot = robot.toUpperCase()
 
-            if (robot = Rock && player = Rock){
-                console.log("Drawww")
-            } else if (robot = Rock && player = Paper) {
-                console.log("You Win!")
-            } else if (robot = Rock && player = Scissors) {
-                console.log("You Lose!")
-            } else if (robot = Paper && player = Rock) {
-                console.log("You Lose!")
-            } else if (robot = Paper && player = Paper) {
-                console.log("Drawww")
-            } else if (robot = Paper && player = Scissors) {
-                console.log("You Win!")
-            } else if (robot = Scissors && player = Rock) {
-                console.log("You Win!")
-            } else if (robot = Scissors && player = Paper) {
-                console.log("You Lose!")
-            } else if (robot = Scissors && player = Scissors) {
-                console.log("Drawww")
+            /* Condition */
+            function game() {
+                if (robot == "ROCK" && player == "ROCK") {
+                    return "Drawww.";
+                } else if (robot == "ROCK" && player == "PAPER") {
+                    return "You Win!";
+                } else if (robot == "ROCK" && player == "SCISSORS") {
+                    return "You Lose!";
+                } else if (robot == "PAPER" && player == "ROCK") {
+                    return "You Lose!";
+                } else if (robot == "PAPER" && player == "PAPER") {
+                    return "Drawww.";
+                } else if (robot == "PAPER" && player == "SCISSORS") {
+                    return "You Win!";
+                } else if (robot == "SCISSORS" && player == "ROCK") {
+                    return "You Win!";
+                } else if (robot == "SCISSORS" && player == "PAPER") {
+                    return "You Lose!";
+                } else if (robot == "SCISSORS" && player == "SCISSORS") {
+                    return "Drawww.";
+                } else {
+                    return "If you don't want to play, don't play!"
+                }
             }
-
-
+            game()
+            console.log("You choose " + player + ".")
+            console.log("Computer choose " + robot + ".")
+            console.log("So..." + game())     
         </script>
     </main>
     <footer></footer>
