@@ -20,10 +20,29 @@
             function computerPlay(min, max){
               return Math.round(Math.random() * (max - min) + min);
             }
-            const robot = (choix[computerPlay(0,2)]);
-            const player = choix[];
+            
+/* Condition */
 
-            console.log(robot)
+            if (robot = Rock && player = Rock){
+                console.log("Drawww")
+            } else if (robot = Rock && player = Paper) {
+                console.log("You Win!")
+            } else if (robot = Rock && player = Scissors) {
+                console.log("You Lose!")
+            } else if (robot = Paper && player = Rock) {
+                console.log("You Lose!")
+            } else if (robot = Paper && player = Paper) {
+                console.log("Drawww")
+            } else if (robot = Paper && player = Scissors) {
+                console.log("You Win!")
+            } else if (robot = Scissors && player = Rock) {
+                console.log("You Win!")
+            } else if (robot = Scissors && player = Paper) {
+                console.log("You Lose!")
+            } else if (robot = Scissors && player = Scissors) {
+                console.log("Drawww")
+            }
+
 
         </script>
     </main>
