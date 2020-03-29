@@ -12,6 +12,7 @@ body,h1,h2,p{
     border-style: none;
 }
 /* theme */
+
 :root{
     --color-primary:#fafafa;
     --color-secondary:#222;
@@ -22,4 +23,55 @@ header{
     color: var(--color-primary);
     text-align: center;
     padding: 1rem;
+}
+
+section{
+    margin: 1rem 4rem;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #222;
+}
+dl{
+    border: 1px solid #222;
+}
+dl dt{
+    display: inline-block;
+    width: calc(100% / 2);
+    border: 1px solid #222;
+}
+dl dd{
+
+}
+
+#play{
+    display: block;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    width: 8rem;
+    height: 2rem;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+#play:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+#choices{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+#choices button{
+    width: 8rem;
+    height: 8rem;
+    font-size: 4rem;
+    border-radius: 10rem;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+
+#choices button:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
 }
