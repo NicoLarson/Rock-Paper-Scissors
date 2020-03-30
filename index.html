@@ -16,16 +16,21 @@
     </header>
     <main>
 
-        <section>
+        <section id="tableScore">
             <h2>Score</h2>
-            <dl>
-                <dt>Player</dt>
-                <dd #playerScore></dd>
-                <dt>Computer</dt>
-                <dd #computerScore></dd>
-            </dl>
+            <div id="score">
+                <div>
+                    <h3><i class="fas fa-user"></i></h3>
+                    <p id="playerScore"></p>
+                </div>
+                <div>
+                    <h3><i class="fas fa-robot"></i></h3>
+                    <p id="robotScore"></p>
+                </div>
+
+            </div>
         </section>
-        <button id="play">Play</button>
+        <button id="play"><span>Play</span></button>
         <div id="choices">
             <button id="rock" class="choice"><i class="far fa-hand-rock"></i></button>
             <button id="paper" class="choice"><i class="far fa-hand-paper"></i></button>
@@ -35,7 +40,7 @@
     </main>
     <script src="./js/script.js"></script>
     <footer>
-        <p>&copy;2020 - Nicolas Yang</p>
+        <p>&copy; Nicolas Yang - 2020</p>
     </footer>
 </body>
 

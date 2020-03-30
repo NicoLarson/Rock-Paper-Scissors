@@ -1,11 +1,8 @@
-
-        alert("Chose your weapon! And play")
-
+alert("Chose your weapon! And play");
 
 let choices = ["ROCK", "PAPER", "SCISSORS"];
-let randomNum = Math.round(Math.random() * 2);
-let robot = choices[randomNum];
 let player;
+let robot;
 
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', () => {
@@ -22,11 +19,16 @@ scissors.addEventListener('click', () => {
     player = "SCISSORS";
 })
 
+var playerScore = 0;
+var robotScore = 0;
 
-
-function playRound() {
+function alertGame() {
     alert("You choose " + player + ".");
     alert("Computer choose " + robot + ".");
+}
+
+function playRound() {
+    robot = choices[Math.round(Math.random() * 2)];
 
     if (robot == "ROCK" && player == "ROCK") {
         return "Drawww.";
@@ -52,12 +54,26 @@ function playRound() {
 }
 
 
-
+let score = function scoreTable() {
+    if (playRound() = "You Win!") {
+        playerScore = playerScore + 1 ;
+        return playerScor;
+    } else if (playRound() = "You Lose!") {
+        return robotScore++;
+    } else {
+        return "Draw"
+    }
+}
 
 const play = document.querySelector('#play');
 play.addEventListener('click', () => {
-   // for (let i = 0; i < 6; i++) 
+    // for (let i = 0; i < 6; i++) 
     {
-        alert("So..." + playRound());
+        alertGame();
+        alert(playRound());
+        score;
+        console.log("Your score: " + playerScore + ". " + "robotScore: " + robotScore)
+        // Essayer  case (playRound() = "You Lose!")
+        //  Alors +1 au Robot
     }
 })
