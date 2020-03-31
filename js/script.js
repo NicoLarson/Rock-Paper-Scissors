@@ -1,33 +1,41 @@
-alert("Chose your weapon! And play");
+document.addEventListener('DOMContentLoaded', () => {
+    
+    console.log("Loaded")
+    
+    alert("Chose your weapon! And play");
 
-let choices = ["ROCK", "PAPER", "SCISSORS"];
-let player;
-let robot;
+
+let player, robot, choices = ["ROCK", "PAPER", "SCISSORS"], playerScore = 0, robotScore = 0;
 
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', () => {
     player = "ROCK";
 })
-
 const paper = document.querySelector("#paper");
 paper.addEventListener('click', () => {
     player = "PAPER";
 })
-
 const scissors = document.querySelector("#scissors");
 scissors.addEventListener('click', () => {
     player = "SCISSORS";
 })
 
-var playerScore = 0;
-var robotScore = 0;
 
-function alertGame() {
-    alert("You choose " + player + ".");
-    alert("Computer choose " + robot + ".");
-}
+const playerScr = document.querySelector('#playerScore');
+const pScore = document.createElement('p');
+pScore.classList.add('content');
+pScore.textContent = playerScore;
+playerScr.appendChild(pScore);
 
-function playRound() {
+const robotScr = document.querySelector('#robotScore');
+const rScore = document.createElement('p');
+rScore.classList.add('content');
+rScore.textContent = robotScore;
+robotScr.appendChild(rScore);
+
+
+
+let playRound = () => {
     robot = choices[Math.round(Math.random() * 2)];
 
     if (robot == "ROCK" && player == "ROCK") {
@@ -53,27 +61,16 @@ function playRound() {
     }
 }
 
-
-let score = function scoreTable() {
-    if (playRound() = "You Win!") {
-        playerScore = playerScore + 1 ;
-        return playerScor;
-    } else if (playRound() = "You Lose!") {
-        return robotScore++;
-    } else {
-        return "Draw"
-    }
-}
-
 const play = document.querySelector('#play');
 play.addEventListener('click', () => {
     // for (let i = 0; i < 6; i++) 
     {
-        alertGame();
-        alert(playRound());
-        score;
-        console.log("Your score: " + playerScore + ". " + "robotScore: " + robotScore)
+        playRound()
+        console.log("You choose " + player + " and robot choose " + robot + ".")
+        console.log(playRound())
+        console.log(playerScore)
         // Essayer  case (playRound() = "You Lose!")
         //  Alors +1 au Robot
     }
+})
 })
