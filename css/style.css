@@ -3,99 +3,101 @@ html {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body,
 h1,
 h2,
-p {
+p,
+ul,
+i,
+li,
+button {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
+
 * {
   border-style: none;
 }
+
 /* theme */
 
 :root {
-  --color-primary: #fafafa;
-  --color-secondary: #222;
+  --color-primary: #ecf0f1;
+  --color-secondary: #2980b9;
+  --color-black: #222;
+  --color-white: #fff;
 }
+
 header {
-  background-color: var(--color-secondary);
+  background-color: var(--color-black);
   color: var(--color-primary);
   text-align: center;
   padding: 1rem;
-}
-main {
-  height: 80vh;
-
-  background: #fff;
-}
-#play {
-
-  background: #f2f3f7;
-  display: block;
-  margin: 2rem auto;
-  border-radius: 1rem;
-  text-transform: uppercase;
-  width: 8rem;
-  height: 2rem;
-  font-size: 1.2rem;
-  color: #5a84a2;
-  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-    -2px -2px 12px rgba(255, 255, 255, 0.5),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.1),
-    -2px -2px 8px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-#play:hover {
-  transition: 0.1s;
-
-  transform: scale(0.98);
-  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.1),
-    inset -2px -2px 8px rgba(0, 0, 0, 0.15);
-}
-#play:hover span{
-
-  transform: scale(0.98);
-
-}
-
-#choices {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 4rem;
-}
-#choices button {
-  width: 8rem;
-  height: 8rem;
-  font-size: 4rem;
-  border-radius: 10rem;
- 
-  background: #f2f3f7;
-  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-    -2px -2px 12px rgba(255, 255, 255, 0.5),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.1),
-    -2px -2px 8px rgba(0, 0, 0, 0.15); cursor: pointer;
-}
-
-
-#choices button:hover {
-    transition: 0.1s;
-  
-    transform: scale(0.98);
-    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-      inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-      inset -2px -2px 4px rgba(255, 255, 255, 0.1),
-      inset -2px -2px 8px rgba(0, 0, 0, 0.15);
-  }
-
-footer {
-  padding: 1rem;
   font-size: 0.8rem;
-  background-color: #222;
-  color: #fafafa;
+  height: 2rem;
+}
+
+main {
+  background: var(--color-secondary);
+  max-width: 100%;
+  height: calc(100vh - 4rem);
+}
+main h2{
+  padding: 2rem 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+table {
+  max-width: 80%;
+  margin: 0rem auto;
+  text-align: center;
+}
+
+thead tr td:first-child > i{
+  color: #2c3e50;
+}
+thead tr td:nth-child(3) > i{
+  color: #2c3e50;
+}
+tr td i, tr td {
+  padding: 0.4rem;
+  font-size: 2.1rem;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+#choices button:hover{
+  cursor: pointer;
+  transition: 0.2s linear;
+  transform: scale(1.4);
+}
+#choices button:active{
+  transform: scale(0.8);
+
+  background-color: none;
+}
+button:focus{
+  outline: none;
+}
+
+main>button{
+  display: block;
+  cursor: pointer;
+  margin: 0.4rem auto;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #2c3e50 ;
+  color: var(--color-white);
+  border-radius: 0.8rem;
+}
+main>button:hover{
+  transition: 0.2s linear;
+  transform: scale(1.2);
+}
+main>button:active{
+  transform: scale(0.8);
 }

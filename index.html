@@ -12,36 +12,41 @@
 
 <body>
     <header>
-        <h1>Rock Paper Scissors</h1>
+        <h1>CHIFOUMI</h1>
     </header>
     <main>
+        <h2>The game</h2>
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <td><i class="fas fa-user-ninja"></i></td>
+                    <td>VS</td>
+                    <td><i class="fas fa-robot"></i></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="playerChoice"></td>
+                    <td id="score"><span id="playerScore">0</span>:<span id="robotScore">0</span></td>
+                    <td id="robotChoice"></td>
+                </tr>
+                <tr id="choices">
+                    <td><button id="rock" class="choice"><i class="far fa-hand-rock"></i></button>
+                    </td>
+                    <td> <button id="paper" class="choice"><i class="far fa-hand-paper"></i></button>
+                    </td>
+                    <td> <button id="scissors" class="choice"><i class="far fa-hand-scissors"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <section id="tableScore">
-            <h2>Score</h2>
-            <div id="score">
-                <div>
-                    <h3><i class="fas fa-user"></i></h3>
-                    <div id="playerScore"></div>
-                </div>
-                <div>
-                    <h3><i class="fas fa-robot"></i></h3>
-                    <div id="robotScore"></div>
-                </div>
-
-            </div>
-        </section>
-        <button id="play"><span>Play</span></button>
-        <div id="choices">
-            <button id="rock" class="choice"><i class="far fa-hand-rock"></i></button>
-            <button id="paper" class="choice"><i class="far fa-hand-paper"></i></button>
-            <button id="scissors" class="choice"><i class="far fa-hand-scissors"></i></button>
-        </div>
+        <button id="reset">Reset</button>
 
     </main>
-    <script src="./js/script.js"></script>
-    <footer>
-        <p>&copy; Nicolas Yang - 2020</p>
-    </footer>
+
+    <script src="./js/appChiFouMi.js"></script>
+
 </body>
 
 </html>
