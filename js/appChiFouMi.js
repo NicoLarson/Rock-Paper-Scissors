@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //* Reset button
     reset.addEventListener('click', () => {
-        i = 1
+        i = 0
         playerScore = 0
         robotScore = 0
         showPlayerScore.innerText = playerScore
         showRobotScore.innerText = robotScore
-        theGame.innerHTML = "ROUND 1"
+        theGame.innerHTML = "Let's play"
     })
 
     //* Rules
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let play = () => {
         i++
         if (i < 6) {
-            theGame.innerHTML = `Round ${i}`
+            theGame.innerHTML = `Round ${i}/5`
             robotChoice = choices[Math.round(Math.random() * 2)];
             if (robotChoice == "rock") {
                 showRobotChoice.innerHTML = `<i class="far fa-hand-rock"></i>`

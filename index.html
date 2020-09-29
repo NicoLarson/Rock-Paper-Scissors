@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
@@ -13,9 +14,11 @@
 <body>
     <header>
         <h1>CHIFOUMI</h1>
+        <a href="https://nicolasyang.fr/"><i class="fas fa-igloo"></i></a>
     </header>
     <main>
         <h2>The game</h2>
+
         <table id="scoreTable">
             <thead>
                 <tr>
@@ -31,11 +34,11 @@
                     <td id="robotChoice"></td>
                 </tr>
                 <tr id="choices">
-                    <td><button id="rock" class="choice"><i class="far fa-hand-rock"></i></button>
+                    <td id="rock" class="choice"><i class="far fa-hand-rock"></i>
                     </td>
-                    <td> <button id="paper" class="choice"><i class="far fa-hand-paper"></i></button>
+                    <td id="paper" class="choice"><i class="far fa-hand-paper"></i>
                     </td>
-                    <td> <button id="scissors" class="choice"><i class="far fa-hand-scissors"></i></button>
+                    <td id="scissors" class="choice"><i class="far fa-hand-scissors"></i>
                     </td>
                 </tr>
             </tbody>
@@ -44,6 +47,11 @@
         <button id="reset">Reset</button>
 
     </main>
+    <footer>
+        <p>© 2020-2021
+            Nicolas Yang. All right reserved.</p>
+            
+    </footer>
 
     <script src="./js/appChiFouMi.js"></script>
 
