@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
         robotScore = 0
         showPlayerScore.innerText = playerScore
         showRobotScore.innerText = robotScore
+        showPlayerChoice.innerHTML = ``
+        showRobotChoice.innerHTML = ``
         theGame.innerHTML = "Let's play"
     })
 
