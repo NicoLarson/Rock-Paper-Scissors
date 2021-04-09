@@ -1,4 +1,5 @@
 #  &#x26F0; Rock &#x1F9FB; Paper &#9986; Scissors
+[Lien de l'app](https://nicolarson.github.io/Rock-Paper-Scissors/)
 ## Etapes
 ### 1. Mise en place du JS
 Travail avec la console.
